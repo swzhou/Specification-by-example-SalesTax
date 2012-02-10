@@ -7,12 +7,11 @@
 <body>
 <div class="example">
     <div>
-        Basic Tax
+        <h3><a name="basic_tax">Basic Tax<a></h3>
         <li>
             Basic sales tax is 10% which is applicable on all goods, except books, food, and medical products that are
-            exempt.
+            exempt.Below is example.
             <br/>
-            So, given the next list, the result should be as expected:
         </li>
 
     </div>
@@ -45,7 +44,7 @@
     </table>
 </div>
 <div class="example">
-    Import Tax
+    <h3><a name="import_tax">Import Tax</a></h3>
     <li>
         Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
     </li>
@@ -56,20 +55,20 @@
             <th>Import duty</th>
         </tr>
         <tr>
-            <td>1 imported box of chocolates</td>
+            <td>Imported box of chocolates</td>
             <td>true</td>
             <td>5%</td>
         </tr>
         <tr>
-            <td>1 chocolate bar</td>
+            <td>Chocolate bar</td>
             <td>false</td>
             <td>0</td>
         </tr>
     </table>
 </div>
 <div class="example">
-    The round rule follows:
-    <li>Tax rounded up to the nearest 0.05</li>
+    <h3><a name="round_rule">Round Rule</a></h3>
+    <li>Tax rounded up to the nearest 0.05. Below are the examples.</li>
     <table>
         <tr>
             <th>Input Tax</th>
@@ -95,22 +94,24 @@
         </tr>
     </table>
 </div>
-
 <div class="example">
-    Sales Taxes
+    <h3>Sales Taxes</h3>
+	<li>Sales</li>
     <table>
         <tr>
             <th>Good Name</th>
             <th>Good Type</th>
             <th>Price</th >
-            <th>Basic Tax</th>
-            <th>Import Rate</th>
+            <th><a href="#basic_tax">Basic Tax</a></th>
+            <th><a href="#import_tax">Import Rate</a></th>
+			<th><a href="#round_rule">Tax Duty after round</a></th>
             <th>Shelf Price</th>
         </tr>
         <tr>
             <td>The Talent Code</td>
             <td>Book</td>
             <td>12.49</td>
+            <td>0</td>
             <td>0</td>
             <td>0</td>
             <td>12.49</td>
@@ -121,6 +122,7 @@
             <td>12.49</td>
             <td>0</td>
             <td>0</td>
+            <td>0</td>
             <td>12.49</td>
         </tr>
         <tr>
@@ -129,6 +131,7 @@
             <td>14.99</td>
             <td>10%</td>
             <td>0</td>
+			<td>1.499</td>
             <td>16.49</td>
         </tr>
         <tr>
@@ -137,6 +140,7 @@
             <td>12.49</td>
             <td>0</td>
             <td>0</td>
+			<td>0</td>
             <td>12.49</td>
         </tr>
     </table>
