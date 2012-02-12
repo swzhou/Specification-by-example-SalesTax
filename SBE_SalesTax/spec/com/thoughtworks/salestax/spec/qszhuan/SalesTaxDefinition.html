@@ -50,17 +50,14 @@
     </li>
     <table concordion:execute="#importDuty = should_be_get_imported_duty(#isImported)">
         <tr>
-            <th>Goods name</th>
             <th concordion:set="#isImported">Is imported</th>
             <th concordion:assertEquals="#importDuty">Import duty</th>
         </tr>
         <tr>
-            <td>Imported box of chocolates</td>
             <td>true</td>
             <td>5%</td>
         </tr>
         <tr>
-            <td>Chocolate bar</td>
             <td>false</td>
             <td>0</td>
         </tr>
@@ -86,7 +83,7 @@
 
         <tr>
             <td>0.015</td>
-            <td>0.05</td>
+            <td>0.00</td>
         </tr>
         <tr>
             <td>0.051</td>
@@ -94,21 +91,37 @@
         </tr>
         <tr>
             <td>0.06</td>
+            <td>0.05</td>
+        </tr>
+        <tr>
+            <td>0.025</td>
+            <td>0.05</td>
+        </tr>
+        <tr>
+            <td>0.075</td>
             <td>0.10</td>
+        </tr>
+        <tr>
+            <td>-0.065</td>
+            <td>Tax should not be negative</td>
+        </tr>
+        <tr>
+            <td>-0.00</td>
+            <td>0.00</td>
         </tr>
     </table>
 </div>
 <div class="example">
     <h3>Sales Taxes</h3>
-	<li>Sales</li>
+    <li>Sales</li>
     <table concordion:execute="#result=createGoods(#goodsName,#goodsType,#goodsPrice)">
         <tr>
             <th concordion:set="#goodsName">Good Name</th>
             <th concordion:set="#goodsType">Good Type</th>
-            <th concordion:set="#goodsPrice">Price</th >
-            <th ><a href="#basic_tax">Basic Tax</a></th>
+            <th concordion:set="#goodsPrice">Price</th>
+            <th><a href="#basic_tax">Basic Tax</a></th>
             <th><a href="#import_tax">Import Rate</a></th>
-			<th concordion:assertEquals="#result.tax"><a href="#round_rule">Tax Duty after round</a></th>
+            <th concordion:assertEquals="#result.tax"><a href="#round_rule">Tax Duty after round</a></th>
             <th concordion:assertEquals="#result.shelfPrice">Shelf Price</th>
         </tr>
         <tr>
@@ -126,17 +139,71 @@
             <td>14.99</td>
             <td>10%</td>
             <td>0</td>
-			<td>1.50</td>
+            <td>1.50</td>
             <td>16.49</td>
         </tr>
         <tr>
-            <td>The Talent Code</td>
-            <td>Book</td>
-            <td>12.49</td>
+            <td>1 chocolate bar</td>
+            <td>Food</td>
+            <td>0.85</td>
             <td>0</td>
             <td>0</td>
-			<td>0.00</td>
-            <td>12.49</td>
+            <td>0.00</td>
+            <td>0.85</td>
+        </tr>
+        <tr>
+            <td>1 imported box of chocolates</td>
+            <td>Food</td>
+            <td>10.00</td>
+            <td>0</td>
+            <td>5%</td>
+            <td>0.50</td>
+            <td>10.50</td>
+        </tr>
+        <tr>
+            <td>1 imported bottle of perfume</td>
+            <td>Others</td>
+            <td>47.50</td>
+            <td>10%</td>
+            <td>5%</td>
+            <td>54.65</td>
+            <td>54.65</td>
+        </tr>
+        <tr>
+            <td>1 imported bottle of perfume</td>
+            <td>Others</td>
+            <td>27.99</td>
+            <td>10%</td>
+            <td>5%</td>
+            <td>0.00</td>
+            <td>32.19</td>
+        </tr>
+        <tr>
+            <td>1 bottle of perfume</td>
+            <td>Others</td>
+            <td>18.99</td>
+            <td>10%</td>
+            <td>0</td>
+            <td>0.00</td>
+            <td>20.89</td>
+        </tr>
+        <tr>
+            <td>1 packet of headache pills</td>
+            <td>Medical</td>
+            <td>9.75</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.00</td>
+            <td>9.75</td>
+        </tr>
+        <tr class="table_row_color_yellow">
+            <td>2 box of imported chocolates</td>
+            <td>Food</td>
+            <td>11.25</td>
+            <td>0</td>
+            <td>5%</td>
+            <td>0.55</td>
+            <td>11.85</td>
         </tr>
     </table>
 
