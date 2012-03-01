@@ -1,0 +1,205 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+    <head>
+        <link href="../concordion.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+<h2>Goods tax and price verification list</h2>
+<p>
+    To make sure each goods has been applied correct tax rate and give correct total cost
+</p>
+
+<div class="prepare basic test data">
+    <p>
+    Fist, we should prepare basic test data: Goods Type
+    </p>
+    <h3>Goods Type</h3>
+    <table border="1">
+    <tbody>
+    <tr>
+        <th>Goods_Type</th>
+    </tr>
+    <tr>
+        <td>Food</td>
+    </tr>
+    <tr>
+        <td>Book</td>
+    </tr>
+    <tr>
+        <td>Medical</td>
+    </tr>
+    <tr>
+        <td>Other</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div class="prepare basic test data">
+    <p>
+    Then, we should prepare basic test data: Rate
+    </p>
+    <h3>Basic Rate</h3>
+    <table border="1">
+    <tbody>
+    <tr>
+        <th>Description</th>
+        <th>Rate</th>
+    </tr>
+    <tr>
+        <td>Basic Rate</td>
+        <td>10%</td>
+    </tr>
+    <tr>
+        <td>Imported Rate</td>
+        <td>5%</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div class="examples">
+    <p>
+    Then, we should generate basic test data and verify the data can be put into database is correctly
+    </p>
+    <h3>Prepare data and save data to database</h3>
+    <table border="1">
+    <tbody>
+    <tr>
+        <th>Goods Name</th>
+        <th>Basic Price</th>
+        <th>Type</th>
+        <th>Import</th>
+    </tr>
+    <tr>
+        <td>Clean Code</td>
+        <td>12.49</td>
+        <td>Book</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>music CD</td>
+        <td>14.99</td>
+        <td>Other</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>box of chocolates</td>
+        <td>10.00</td>
+        <td>Food</td>
+        <td>Yes</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div class="examples">
+    <p>
+    Then, we should first verify rounding rules
+    </p>
+    <h3>Rounding Rules</h3>
+    <table border="1">
+    <tbody>
+    <tr>
+        <th>Basic Tax Cost</th>
+        <th>Basic Tax Cost after applying rounding rule</th>
+        <th>Import Tax Cost </th>
+        <th>Basic Tax Cost after applying rounding rule</th>
+        <th>Total Tax</th>
+    </tr>
+    <tr>
+        <td>0.06</td>
+        <td>0.10</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.10</td>
+    </tr>
+    <tr>
+        <td>0.03</td>
+        <td>0.03</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0.06</td>
+        <td>0.10</td>
+        <td>0.03</td>
+        <td>0.03</td>
+        <td>0.13</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div class="examples">
+    <p>
+    Verify the saved data to make sure the basic data is correct
+    </p>
+    <h3>Verify data</h3>
+    <table border="1">
+    <tbody>
+    <tr>
+        <th>Goods Name</th>
+        <th>Basic Price</th>
+        <th>Type</th>
+        <th>Import</th>
+    </tr>
+    <tr>
+        <td>Clean Code</td>
+        <td>12.49</td>
+        <td>Book</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>music CD</td>
+        <td>14.99</td>
+        <td>Other</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>box of chocolates</td>
+        <td>10.00</td>
+        <td>Food</td>
+        <td>Yes</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div class="example">
+ <p>
+    In this test, we need to verify the tax, the total cost should be correct
+</p>
+<h3>Examples</h3>
+<table border="1">
+<tbody>
+ <tr>
+     <th>Goods_Name</th>
+     <th>Goods_Number</th>
+     <th>Tax</th>
+     <th>Total_Cost</th>
+ </tr>
+<tr concordion:execute="#mixed_tax_and_total= cal_mixed_tax(#goods_name,#goods_number)">
+     <td concordion:set="#goods_name">Clean Code</td>
+     <td concordion:set="#goods_number">1</td>
+     <td concordion:assertEquals="#mixed_tax_and_total.tax">0.00</td>
+     <td concordion:assertEquals="#mixed_tax_and_total.total">12.49</td>
+ </tr>
+ <tr concordion:execute="#mixed_tax_and_total= cal_mixed_tax(#goods_name,#goods_number)">
+     <td concordion:set="#goods_name">music CD</td>
+     <td concordion:set="#goods_number">1</td>
+     <td concordion:assertEquals="#mixed_tax_and_total.tax">1.50</td>
+     <td concordion:assertEquals="#mixed_tax_and_total.total">16.49</td>
+ </tr>
+ <tr concordion:execute="#mixed_tax_and_total= cal_mixed_tax(#goods_name,#goods_number)">
+     <td concordion:set="#goods_name">chocolate bar</td>
+     <td concordion:set="#goods_number">1</td>
+     <td concordion:assertEquals="#mixed_tax_and_total.tax">0.50</td>
+     <td concordion:assertEquals="#mixed_tax_and_total.total">10.05</td>
+ </tr>
+<tr>
+     <td>Total</td>
+     <td>3</td>
+     <td>2.0</td>
+     <td>39.03</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+</body>
+</html>
