@@ -1,92 +1,149 @@
-<html  xmlns:concordion="http://www.concordion.org/2007/concordion">
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
 <head>
-    <link href="../concordion.css" rel="stylesheet" type="text/css" />
+    <link href="../concordion.css" rel="stylesheet" type="text/css"/>
     <title>SalesTax Definition</title>
 </head>
 
 <body>
-    <div class="example">
-        <div >
-           <li>
-               Basic sales tax is applicable on all goods, except books, food, and medical products that are exempt.
-               <br/>
-               So, given the next list, the result should be as expected:
-           </li>
-
-        </div>
-        <table concordion:execute="#result = isExempt(#type)">
-            <tr>
-                <th concordion:set="#type">Good Type</th>
-                <th concordion:assertEquals="#result">Exempt for basic tax</th>
-            </tr>
-            <tr>
-                <td >Book</td> <td >true</td>
-            </tr>
-            <tr>
-                <td>Food</td> <td>true</td>
-            </tr>
-            <tr>
-                <td >Medical</td> <td >true</td>
-            </tr>
-            <tr>
-                <td >Sports</td> <td >false</td>
-            </tr>
-            <tr>
-                <td >Health</td> <td >false</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="example">
-        There are two types of tax:
+<div class="example">
+    <div>
         <li>
-            Basic sales tax is  at a rate of 10% .
-        </li>
-        <li>
-            Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
+            Basic sales tax is applicable on all goods, except books, food, and medical products that are exempt.
+            <br/>
+            So, given the next list, the result should be as expected:
         </li>
 
-        <table>
-            <tr>
-                <th>Goods name</th>
-                <th>Goods type</th>
-                <th>Is imported</th>
-                <th>Basic sales tax</th>
-                <th>Import duty</th>
-            </tr>
-            <tr>
-                <td>The Talent Code</td>
-                <td>Book</td>
-                <td>false</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>1 imported chocolate bar</td>
-                <td>Food</td>
-                <td>true</td>
-                <td>0</td>
-                <td>5%</td>
-            </tr>
-
-            <tr>
-                <td>Nike shoes</td>
-                <td>Sports</td>
-                <td>false</td>
-                <td>10%</td>
-                <td>0</td>
-            </tr>
-
-            <tr>
-                <td>1 imported bottle of perfume</td>
-                <td>Cosmetics</td>
-                <td>true</td>
-                <td>10%</td>
-                <td>5%</td>
-            </tr>
-        </table>
-
     </div>
+    <table concordion:execute="#result = isExempt(#type)">
+        <tr>
+            <th concordion:set="#type">Good Type</th>
+            <th concordion:assertEquals="#result">Exempt for basic tax</th>
+        </tr>
+        <tr>
+            <td>Book</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>Food</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>Medical</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>Sports</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>Health</td>
+            <td>false</td>
+        </tr>
+    </table>
+</div>
+
+<div class="example">
+    There are two types of tax:
+    <li>
+        Basic sales tax is at a rate of 10% .
+    </li>
+    <li>
+        Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
+    </li>
+
+    <table>
+        <tr>
+            <th>Goods name</th>
+            <th>Goods type</th>
+            <th>Is imported</th>
+            <th>Basic sales tax</th>
+            <th>Import duty</th>
+        </tr>
+        <tr>
+            <td>The Talent Code</td>
+            <td>Book</td>
+            <td>false</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1 imported chocolate bar</td>
+            <td>Food</td>
+            <td>true</td>
+            <td>0</td>
+            <td>5%</td>
+        </tr>
+
+        <tr>
+            <td>Nike shoes</td>
+            <td>Sports</td>
+            <td>false</td>
+            <td>10%</td>
+            <td>0</td>
+        </tr>
+
+        <tr>
+            <td>1 imported bottle of perfume</td>
+            <td>Cosmetics</td>
+            <td>true</td>
+            <td>10%</td>
+            <td>5%</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th> Good Name</th>
+            <th> Good Type</th>
+            <th>Type is Exempt of basic rate?</th>
+            <th>Basic Rate</th>
+            <th>Is Imported?</th>
+            <th>Import Rate</th>
+            <th>Price</th>
+            <th>Shelf Price</th>
+        </tr>
+        <tr>
+            <td>The Talent Code</td>
+            <td>Book</td>
+            <td>true</td>
+            <td>0</td>
+            <td>false</td>
+            <td>0</td>
+            <td>12.49</td>
+            <td>12.49</td>
+        </tr>
+        <tr>
+            <td>The Talent Code</td>
+            <td>Book</td>
+            <td>true</td>
+            <td>0</td>
+            <td>false</td>
+            <td>0</td>
+            <td>12.49</td>
+            <td>12.49</td>
+        </tr>
+        <tr>
+            <td>1 music CD </td>
+            <td>Digital</td>
+            <td>false</td>
+            <td>10%</td>
+            <td>false</td>
+            <td>0</td>
+            <td>14.99</td>
+            <td>16.49</td>
+        </tr>
+        <tr>
+            <td>The Talent Code</td>
+            <td>Book</td>
+            <td>true</td>
+            <td>0</td>
+            <td>false</td>
+            <td>0</td>
+            <td>12.49</td>
+            <td>12.49</td>
+        </tr>
+    </table>
+
+</div>
 
 
 </body>
