@@ -7,8 +7,10 @@
 <body>
 <div class="example">
     <div>
+        Basic Tax
         <li>
-            Basic sales tax is applicable on all goods, except books, food, and medical products that are exempt.
+            Basic sales tax is 10% which is applicable on all goods, except books, food, and medical products that are
+            exempt.
             <br/>
             So, given the next list, the result should be as expected:
         </li>
@@ -18,127 +20,123 @@
         <tr>
             <th concordion:set="#type">Good Type</th>
             <th concordion:assertEquals="#result">Exempt for basic tax</th>
+            <th>Tax Rate</th>
         </tr>
         <tr>
             <td>Book</td>
             <td>true</td>
+            <td>0</td>
         </tr>
         <tr>
             <td>Food</td>
             <td>true</td>
+            <td>0</td>
         </tr>
         <tr>
             <td>Medical</td>
             <td>true</td>
+            <td>0</td>
         </tr>
         <tr>
-            <td>Sports</td>
+            <td>Others</td>
             <td>false</td>
+            <td>10%</td>
+        </tr>
+    </table>
+</div>
+<div class="example">
+    Import Tax
+    <li>
+        Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
+    </li>
+    <table>
+        <tr>
+            <th>Goods name</th>
+            <th>Is imported</th>
+            <th>Import duty</th>
         </tr>
         <tr>
-            <td>Health</td>
+            <td>1 imported box of chocolates</td>
+            <td>true</td>
+            <td>5%</td>
+        </tr>
+        <tr>
+            <td>1 chocolate bar</td>
             <td>false</td>
+            <td>0</td>
+        </tr>
+    </table>
+</div>
+<div class="example">
+    The round rule follows:
+    <li>Tax rounded up to the nearest 0.05</li>
+    <table>
+        <tr>
+            <th>Input Tax</th>
+            <th>Rounded results</th>
+        </tr>
+
+        <tr>
+            <td>1.499</td>
+            <td>1.50</td>
+        </tr>
+
+        <tr>
+            <td>0.015</td>
+            <td>0.05</td>
+        </tr>
+        <tr>
+            <td>0.051</td>
+            <td>0.05</td>
+        </tr>
+        <tr>
+            <td>0.06</td>
+            <td>0.10</td>
         </tr>
     </table>
 </div>
 
 <div class="example">
-    There are two types of tax:
-    <li>
-        Basic sales tax is at a rate of 10% .
-    </li>
-    <li>
-        Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
-    </li>
-
+    Sales Taxes
     <table>
         <tr>
-            <th>Goods name</th>
-            <th>Goods type</th>
-            <th>Is imported</th>
-            <th>Basic sales tax</th>
-            <th>Import duty</th>
-        </tr>
-        <tr>
-            <td>The Talent Code</td>
-            <td>Book</td>
-            <td>false</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>1 imported chocolate bar</td>
-            <td>Food</td>
-            <td>true</td>
-            <td>0</td>
-            <td>5%</td>
-        </tr>
-
-        <tr>
-            <td>Nike shoes</td>
-            <td>Sports</td>
-            <td>false</td>
-            <td>10%</td>
-            <td>0</td>
-        </tr>
-
-        <tr>
-            <td>1 imported bottle of perfume</td>
-            <td>Cosmetics</td>
-            <td>true</td>
-            <td>10%</td>
-            <td>5%</td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th> Good Name</th>
-            <th> Good Type</th>
-            <th>Type is Exempt of basic rate?</th>
-            <th>Basic Rate</th>
-            <th>Is Imported?</th>
+            <th>Good Name</th>
+            <th>Good Type</th>
+            <th>Price</th >
+            <th>Basic Tax</th>
             <th>Import Rate</th>
-            <th>Price</th>
             <th>Shelf Price</th>
         </tr>
         <tr>
             <td>The Talent Code</td>
             <td>Book</td>
-            <td>true</td>
-            <td>0</td>
-            <td>false</td>
-            <td>0</td>
             <td>12.49</td>
+            <td>0</td>
+            <td>0</td>
             <td>12.49</td>
         </tr>
         <tr>
-            <td>The Talent Code</td>
+            <td>1 imported </td>
             <td>Book</td>
-            <td>true</td>
-            <td>0</td>
-            <td>false</td>
-            <td>0</td>
             <td>12.49</td>
+            <td>0</td>
+            <td>0</td>
             <td>12.49</td>
         </tr>
         <tr>
-            <td>1 music CD </td>
-            <td>Digital</td>
-            <td>false</td>
-            <td>10%</td>
-            <td>false</td>
-            <td>0</td>
+            <td>1 music CD</td>
+            <td>Others</td>
             <td>14.99</td>
+            <td>10%</td>
+            <td>0</td>
             <td>16.49</td>
         </tr>
         <tr>
             <td>The Talent Code</td>
             <td>Book</td>
-            <td>true</td>
-            <td>0</td>
-            <td>false</td>
-            <td>0</td>
             <td>12.49</td>
+            <td>0</td>
+            <td>0</td>
             <td>12.49</td>
         </tr>
     </table>
