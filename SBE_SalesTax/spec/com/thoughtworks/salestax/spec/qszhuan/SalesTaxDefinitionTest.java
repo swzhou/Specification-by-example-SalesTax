@@ -18,6 +18,33 @@ public class SalesTaxDefinitionTest extends ConcordionTestCase {
 
            return exemptGoodTypes.contains(type);
        }
+    
+    public String should_be_get_rate_as_expected( String type){
+        double rate = getRate(type);
+        String result = doubleToPercent(rate);
+        return result;
+    }
+
+    private String doubleToPercent(double rate) {
+        String result = "0";
+        if(rate != 0)
+            result  = (int)(rate*100) + "%";
+        return result;
+    }
+
+    public String should_be_get_imported_duty(String isImported){
+        Boolean imported = new Boolean(isImported);
+        double importedDuty = getImportedDuty(imported);
+        return doubleToPercent(importedDuty);
+    }
+
+    private double getImportedDuty(boolean imported) {
+        return imported ? 0.05 : 0;
+    }
+
+    public double getRate(String type){
+            return isExempt(type) ? 0 : 0.1;
+        }
 
 }
 

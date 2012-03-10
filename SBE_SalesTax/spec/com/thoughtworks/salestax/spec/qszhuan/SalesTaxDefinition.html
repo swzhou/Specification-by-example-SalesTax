@@ -7,7 +7,7 @@
 <body>
 <div class="example">
     <div>
-        <h3><a name="basic_tax">Basic Tax<a></h3>
+        <h3><a name="basic_tax">Basic Tax</a></h3>
         <li>
             Basic sales tax is 10% which is applicable on all goods, except books, food, and medical products that are
             exempt.Below is example.
@@ -19,7 +19,7 @@
         <tr>
             <th concordion:set="#type">Good Type</th>
             <th concordion:assertEquals="#result">Exempt for basic tax</th>
-            <th>Tax Rate</th>
+            <th concordion:assertEquals="should_be_get_rate_as_expected(#type)">Tax Rate</th>
         </tr>
         <tr>
             <td>Book</td>
@@ -48,11 +48,11 @@
     <li>
         Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
     </li>
-    <table>
+    <table concordion:execute="#importDuty = should_be_get_imported_duty(#isImported)">
         <tr>
             <th>Goods name</th>
-            <th>Is imported</th>
-            <th>Import duty</th>
+            <th concordion:set="#isImported">Is imported</th>
+            <th concordion:assertEquals="#importDuty">Import duty</th>
         </tr>
         <tr>
             <td>Imported box of chocolates</td>
