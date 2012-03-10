@@ -71,82 +71,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="encodings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <file leaf-file-name="SalesTaxDefinitionTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinitionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compiler.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SBE_SalesTax.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SBE_SalesTax.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="29" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profiles_settings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Project_Dependency.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/libraries/Project_Dependency.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="31" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cost_With_Tax.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/SalesTax_LJH_LB_LLY/Cost_With_Tax.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="73" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalesTaxDefinition.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinition.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="49" selection-start="3102" selection-end="3102" vertical-scroll-proportion="0.05637982">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cost_With_Tax.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/SalesTax_LJH_LB_LLY/Cost_With_Tax.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="53" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
+            <state line="53" column="29" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.34837544">
               <folding />
             </state>
           </provider>
@@ -155,7 +83,27 @@
       <file leaf-file-name="SalesTaxEntity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+            <state line="27" column="14" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#getBasicTaxRate#0;class#SalesTaxEntity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Goods.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/Goods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="36" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SalesTaxDefinition.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinition.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="17" selection-start="3342" selection-end="3342" vertical-scroll-proportion="-8.357142">
               <folding />
             </state>
           </provider>
@@ -182,10 +130,11 @@
         <option value="$PROJECT_DIR$/spec/SalesTax_LJH_LB_LLY/Price_With_Tax.html" />
         <option value="$PROJECT_DIR$/spec/SalesTax_LJH_LB_LLY/Cost_With_Tax.java" />
         <option value="$PROJECT_DIR$/spec/SalesTax_LJH_LB_LLY/Cost_With_Tax.html" />
-        <option value="$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxEntity.java" />
-        <option value="$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinitionTest.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxEntity.java" />
         <option value="$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinition.html" />
+        <option value="$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinitionTest.java" />
+        <option value="$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/Goods.java" />
       </list>
     </option>
   </component>
@@ -336,6 +285,7 @@
       <recent name="com.thoughtworks.salestax.spec.qszhuan.SalesTaxEntity" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.thoughtworks.salestax.spec.qszhuan" />
       <recent name="com.thoughtworks.salestax.spec.example" />
     </key>
   </component>
@@ -374,6 +324,36 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SalesTaxDefinitionTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" />
+      <extension name="snapshooter" />
+      <module name="SBE_SalesTax" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.salestax.spec.qszhuan" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.salestax.spec.qszhuan.SalesTaxDefinitionTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -590,10 +570,11 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.SalesTax_LJH_LB_LLY in SBE_SalesTax" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.com.thoughtworks.salestax.spec.qszhuan in SBE_SalesTax" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.All in SBE_SalesTax" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SalesTaxDefinitionTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -659,12 +640,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973147" sideWeight="0.67433834" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -673,11 +655,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29813161" sideWeight="0.6753247" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32467532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29813161" sideWeight="0.9448052" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.055194806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -745,11 +726,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/LIB/junit-4.8.2.jar!/junit/framework/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="34" selection-start="4373" selection-end="4373" vertical-scroll-proportion="-11.68" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/LIB/junit-4.8.2.jar!/junit/framework/TestCase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="29" selection-start="428" selection-end="428" vertical-scroll-proportion="6.96" />
@@ -763,11 +739,6 @@
     <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/concordion.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="20" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinitionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
@@ -810,11 +781,6 @@
         <state line="0" column="73" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/SalesTax_LJH_LB_LLY/Cost_With_Tax.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="53" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
@@ -822,9 +788,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="14" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#getBasicTaxRate#0;class#SalesTaxEntity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinition.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="49" selection-start="3102" selection-end="3102" vertical-scroll-proportion="0.05637982">
+        <state line="111" column="17" selection-start="3342" selection-end="3342" vertical-scroll-proportion="-8.357142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="36" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/com/thoughtworks/salestax/spec/qszhuan/SalesTaxDefinitionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="29" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.34837544">
           <folding />
         </state>
       </provider>

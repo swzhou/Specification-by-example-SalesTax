@@ -69,15 +69,19 @@
 <div class="example">
     <h3><a name="round_rule">Round Rule</a></h3>
     <li>Tax rounded up to the nearest 0.05. Below are the examples.</li>
-    <table>
+    <table concordion:execute="#result=should_get_round_result(#input)">
         <tr>
-            <th>Input Tax</th>
-            <th>Rounded results</th>
+            <th concordion:set="#input">Input Tax</th>
+            <th concordion:assertEquals="#result">Rounded results</th>
         </tr>
 
         <tr>
             <td>1.499</td>
             <td>1.50</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0.00</td>
         </tr>
 
         <tr>
@@ -97,15 +101,15 @@
 <div class="example">
     <h3>Sales Taxes</h3>
 	<li>Sales</li>
-    <table>
+    <table concordion:execute="#result=createGoods(#goodsName,#goodsType,#goodsPrice)">
         <tr>
-            <th>Good Name</th>
-            <th>Good Type</th>
-            <th>Price</th >
-            <th><a href="#basic_tax">Basic Tax</a></th>
+            <th concordion:set="#goodsName">Good Name</th>
+            <th concordion:set="#goodsType">Good Type</th>
+            <th concordion:set="#goodsPrice">Price</th >
+            <th ><a href="#basic_tax">Basic Tax</a></th>
             <th><a href="#import_tax">Import Rate</a></th>
-			<th><a href="#round_rule">Tax Duty after round</a></th>
-            <th>Shelf Price</th>
+			<th concordion:assertEquals="#result.tax"><a href="#round_rule">Tax Duty after round</a></th>
+            <th concordion:assertEquals="#result.shelfPrice">Shelf Price</th>
         </tr>
         <tr>
             <td>The Talent Code</td>
@@ -113,16 +117,7 @@
             <td>12.49</td>
             <td>0</td>
             <td>0</td>
-            <td>0</td>
-            <td>12.49</td>
-        </tr>
-        <tr>
-            <td>1 imported </td>
-            <td>Book</td>
-            <td>12.49</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
+            <td>0.00</td>
             <td>12.49</td>
         </tr>
         <tr>
@@ -131,7 +126,7 @@
             <td>14.99</td>
             <td>10%</td>
             <td>0</td>
-			<td>1.499</td>
+			<td>1.50</td>
             <td>16.49</td>
         </tr>
         <tr>
@@ -140,7 +135,7 @@
             <td>12.49</td>
             <td>0</td>
             <td>0</td>
-			<td>0</td>
+			<td>0.00</td>
             <td>12.49</td>
         </tr>
     </table>
