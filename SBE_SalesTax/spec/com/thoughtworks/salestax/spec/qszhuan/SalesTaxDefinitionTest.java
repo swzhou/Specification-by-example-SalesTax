@@ -2,9 +2,6 @@ package com.thoughtworks.salestax.spec.qszhuan;
 
 import org.concordion.integration.junit3.ConcordionTestCase;
 
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-
 /**
  * Created by IntelliJ IDEA.
  * User: zhuan
@@ -32,22 +29,23 @@ public class SalesTaxDefinitionTest extends ConcordionTestCase {
     }
 
     public String should_get_round_result(double input){
-        return FormatTax(input);
+        return Format(SalesTaxEntity.Round(input));
             
     }
 
-    private String FormatTax(double input) {
-        DecimalFormat df = new DecimalFormat("######0.00");
-        return df.format(SalesTaxEntity.Round(input));
+    private String Format(double input) {
+       // DecimalFormat df = new DecimalFormat("######0.00");
+        String format = String.format("%.2f", input);
+        return format;//df.format(SalesTaxEntity.Round(input));
     }
 
 
     public Result createGoods(String goodsName,String goodsType, double price){
         Goods goods = new Goods(goodsName, goodsType,price);
         Result result = new Result();
-        result.tax = FormatTax(goods.GetTax());
+        result.tax = Format(goods.GetTax());
         double shelfPrice = goods.GetShelfPrice();
-        result.shelfPrice = shelfPrice;
+        result.shelfPrice = Format(shelfPrice);
         return result;
     }
     private String doubleToPercent(double rate) {
@@ -59,7 +57,7 @@ public class SalesTaxDefinitionTest extends ConcordionTestCase {
 
     class Result{
         public String tax;
-        public double shelfPrice;
+        public String shelfPrice;
     }
 
 }

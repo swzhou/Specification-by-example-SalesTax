@@ -25,16 +25,14 @@ public class Goods {
     private void CalcTax() {
         this.isImported = goodsName.contains("import");
         SalesTaxEntity salesTaxEntity = new SalesTaxEntity();
-        double basicTax = SalesTaxEntity.Round(salesTaxEntity.getBasicTaxRate(goodsType) * price);
-        double importedDuty = SalesTaxEntity.Round(SalesTaxEntity.getImportedDuty(isImported) * price);
-        this.Tax =  basicTax + importedDuty;
+        double input = salesTaxEntity.getBasicTaxRate(goodsType) * price + SalesTaxEntity.getImportedDuty(isImported) * price;
+        this.Tax =  SalesTaxEntity.Round(input);
     }
 
     public double GetTax(){
         return this.Tax;
     }
     public double GetShelfPrice(){
-        return (int)((this.price + this.Tax)*100) /100.0
-                ;
+        return this.price + this.Tax ;
     }
 }
