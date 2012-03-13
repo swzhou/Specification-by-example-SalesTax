@@ -105,7 +105,7 @@
 </div>
 <div class="example">
     <h3>Sales Taxes</h3>
-    <li>Given I buy the following Goods:</li>
+    <p>Given I buy following Goods:
     <table concordion:execute="#result=createGoods(#goodsName,#goodsType,#goodsPrice)">
         <tr>
             <th concordion:set="#goodsName">Good Name</th>
@@ -143,6 +143,21 @@
             <td>0.00</td>
             <td>0.85</td>
         </tr>
+    </table>
+    The Total Tax should be : <B concordion:assertEquals="">100</B>.
+    The Total Amount should be :<B >200 </B>
+	</p>
+	    <p>Given I buy following Goods:
+    <table concordion:execute="#result=createGoods(#goodsName,#goodsType,#goodsPrice)">
+        <tr>
+            <th concordion:set="#goodsName">Good Name</th>
+            <th concordion:set="#goodsType">Good Type</th>
+            <th concordion:set="#goodsPrice">Price</th>
+            <th><a href="#basic_tax">Basic Tax</a></th>
+            <th><a href="#import_tax">Import Rate</a></th>
+            <th concordion:assertEquals="#result.tax"><a href="#round_rule">Tax Duty after round</a></th>
+            <th concordion:assertEquals="#result.shelfPrice">Shelf Price</th>
+        </tr>
         <tr>
             <td>1 imported box of chocolates</td>
             <td>Food</td>
@@ -160,6 +175,21 @@
             <td>5%</td>
             <td>7.15</td>
             <td>54.65</td>
+        </tr>
+    </table>
+    The Total Tax should be : <B concordion:assertEquals="">100</B>.
+    The Total Amount should be :<B >200 </B>
+	</p>
+	    <p>Given I buy following Goods:
+    <table concordion:execute="#result=createGoods(#goodsName,#goodsType,#goodsPrice)">
+        <tr>
+            <th concordion:set="#goodsName">Good Name</th>
+            <th concordion:set="#goodsType">Good Type</th>
+            <th concordion:set="#goodsPrice">Price</th>
+            <th><a href="#basic_tax">Basic Tax</a></th>
+            <th><a href="#import_tax">Import Rate</a></th>
+            <th concordion:assertEquals="#result.tax"><a href="#round_rule">Tax Duty after round</a></th>
+            <th concordion:assertEquals="#result.shelfPrice">Shelf Price</th>
         </tr>
         <tr>
             <td>1 imported bottle of perfume</td>
@@ -198,10 +228,9 @@
             <td>11.85</td>
         </tr>
     </table>
-
-   <li> The Total Tax is : <B concordion:assertEquals="">100</B></li>
-    The Total Amount is :<B >200 </B>
-
+    The Total Tax should be : <B concordion:assertEquals="">100</B>.
+    The Total Amount should be :<B >200 </B>
+	</p>
 </div>
 
 
