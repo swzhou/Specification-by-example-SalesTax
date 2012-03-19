@@ -40,14 +40,7 @@ public class SalesTaxDefinitionTest extends ConcordionTestCase {
     }
 
 
-    public Result createGoods(String goodsName,String goodsType, double price){
-        Goods goods = new Goods(goodsName, goodsType,price);
-        Result result = new Result();
-        result.tax = Format(goods.GetTax());
-        double shelfPrice = goods.GetShelfPrice();
-        result.shelfPrice = Format(shelfPrice);
-        return result;
-    }
+
     private String doubleToPercent(double rate) {
         String result = "0";
         if(rate != 0)
@@ -55,10 +48,7 @@ public class SalesTaxDefinitionTest extends ConcordionTestCase {
         return result;
     }
 
-    class Result{
-        public String tax;
-        public String shelfPrice;
-    }
+
 
 }
 
